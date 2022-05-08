@@ -2,28 +2,20 @@
   font-family: "Arial", sans-serif;
   display: flex;
   flex-direction: column;
-  min-width: $vp-320 - 40px;
-  min-height: 100%;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  transition: 0.2s;
+  transition: 0.5s;
   overflow-x: hidden;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .page-body__inner {
   margin: 0 auto;
   padding: 0 40px;
-  max-width: $desktop-max-content;
-
-  @include vp-1279 {
-    padding: 0 30px;
-  }
-
-  @include vp-767 {
-    padding: 0 10px;
-  }
 }
 //
 //.page-body__footer {

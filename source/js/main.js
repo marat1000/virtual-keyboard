@@ -10,44 +10,6 @@ const keysWrapper = document.createElement('div');
 keysWrapper.classList.add('keys-wrapper');
 fragment.appendChild(keysWrapper);
 
-function getLanguage() {
-  let current = 'en';
-  if (localStorage.getItem('UserLanguage')) {
-    current = localStorage.getItem('UserLanguage');
-  } else {
-    localStorage.setItem('UserLanguage', current);
-  }
-  let next = current === 'en' ? 'ru' : 'en';
-  const getCurrent = () => current;
-  const getNext = () => next;
-  const change = () => {
-    [current, next] = [next, current];
-    localStorage.setItem('UserLanguage', current);
-  };
-  return {
-    getCurrent,
-    getNext,
-    change,
-  };
-}
-
-function getKey(content) {
-  const keyContent = document.createElement('span');
-  if (content.length === 2) {
-    const firstSymbol = document.createElement('span');
-    const secondSymbol = document.createElement('span');
-    firstSymbol.textContent = `${content[0]}`;
-    secondSymbol.textContent = `${content[1]}`;
-    firstSymbol.classList.add('first-symbol');
-    secondSymbol.classList.add('second-symbol');
-    keyContent.appendChild(firstSymbol);
-    keyContent.appendChild(secondSymbol);
-  } else {
-    keyContent.textContent = content;
-  }
-  return keyContent;
-}
-
 const KEYS = [
 // eCode, type,  shifting, name(en), input(en), input(en) + shift,
 // name(ru), input(ru), input(ru) + shift
@@ -124,6 +86,44 @@ const FIRST_IN_ROW = ['Backquote', 'Tab', 'CapsLock', 'ShiftLeft', 'ControlLeft'
 let language;
 
 const keyboard = {};
+
+function getLanguage() {
+  let current = 'en';
+  if (localStorage.getItem('UserLanguage')) {
+    current = localStorage.getItem('UserLanguage');
+  } else {
+    localStorage.setItem('UserLanguage', current);
+  }
+  let next = current === 'en' ? 'ru' : 'en';
+  const getCurrent = () => current;
+  const getNext = () => next;
+  const change = () => {
+    [current, next] = [next, current];
+    localStorage.setItem('UserLanguage', current);
+  };
+  return {
+    getCurrent,
+    getNext,
+    change,
+  };
+}
+
+function getKey(content) {
+  const keyContent = document.createElement('span');
+  if (content.length === 2) {
+    const firstSymbol = document.createElement('span');
+    const secondSymbol = document.createElement('span');
+    firstSymbol.textContent = `${content[0]}`;
+    secondSymbol.textContent = `${content[1]}`;
+    firstSymbol.classList.add('first-symbol');
+    secondSymbol.classList.add('second-symbol');
+    keyContent.appendChild(firstSymbol);
+    keyContent.appendChild(secondSymbol);
+  } else {
+    keyContent.textContent = content;
+  }
+  return keyContent;
+}
 
 class Key {
   constructor(

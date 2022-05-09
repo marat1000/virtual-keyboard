@@ -1,5 +1,8 @@
 # virtual-keyboard
 
+Деплой
+https://marat1000.github.io/virtual-keyboard/vkey/
+
 ## Краткая инструкция по работе
 ### Для начала работы у вас должен быть установлен:
 * Node.js

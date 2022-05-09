@@ -4,9 +4,6 @@ env:
   browser: true
   es6: true
 
-rules:
-  new-cap: 0
-
 parserOptions:
   ecmaVersion: 2017
 

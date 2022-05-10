@@ -9,7 +9,9 @@ https://marat1000.github.io/virtual-keyboard/vkey/
 * Gulp
 * npm last version
 ## Основные команды для работы
+* Переключение на ветку разработки в сответствие с инструкцией по тестированию - `git checkout development`
 * Установка - `npm i`
+* Запуск локального сервера - `npm start`
 * Запуск локального сервера - `npm start`
 * Запуск тестирования на соответствия код-гайду AirBNB - `npx eslint source/js/main.js`
 

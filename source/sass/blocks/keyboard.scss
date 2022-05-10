@@ -1,0 +1,79 @@
+.desc {
+  width: 700px;
+}
+
+textarea {
+  font-family: "Courier New", monospace;
+  font-size: 1.5rem;
+  width: 700px;
+  outline: none;
+  padding: 2rem;
+  border-radius: 5px;
+  resize: none;
+  background-color: #ebe2d6;
+}
+
+.keys-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+
+.row {
+  display: flex;
+}
+
+.key {
+  flex: 0 1 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  margin: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "Arial", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  user-select: none;
+  border-radius: 3px;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.5);
+  transition: 0.4s ease-in;
+  cursor: pointer;
+}
+
+.key.pressed {
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.5) inset;
+  background-color: #b7b305;
+}
+
+.wide {
+  flex: 2 0 70px;
+}
+
+.row:last-child .key:last-child {
+  margin-right: 75px;
+}
+
+.first-symbol {
+  vertical-align: 50%;
+  margin-right: 10px;
+}
+
+.second-symbol {
+  vertical-align: -50%;
+}
+
+.key.caps-lock {
+  background-color: #4b8f9c;
+}
+
+.caps-lock.pressed {
+  background-color: #4b8f9c;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}

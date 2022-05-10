@@ -1,0 +1,20 @@
+.page-body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  transition: 0.5s;
+  overflow-x: hidden;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7eccf;
+}
+
+.page-body__inner {
+  margin: 0 auto;
+  padding: 0 40px;
+}
